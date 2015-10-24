@@ -1,0 +1,28 @@
+---
+title: "Mod1d Correlation"
+author: "runlevel0"
+date: "October 24, 2015"
+output: html_document
+---
+
+### Correlation coeficient
+$r$ and $r^2$
+
+the function for that is cor(var_x,var_y) nd fom a dataset it can be cor(dataset$var_x,dataset$var_y)
+
+An example: 
+
+```{r}
+#The dataset is taken from the homework Mod1d
+
+
+options(digits=3)
+dset1 <- read.csv("/home/runlevel0/edx_statsAP/mod1d_cor_dset01.csv")
+
+knitr::kable(dset1)
+
+cor(dset1$HW.AVG,dset1$Final.Exam)
+
+cor(dset1$Test.AVG,dset1$Final.Exam)
+
+```
