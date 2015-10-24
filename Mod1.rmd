@@ -1,0 +1,34 @@
+---
+title: "STATx Module 1"
+author: "runlevel0"
+date: "October 16, 2015"
+output: html_document
+---
+
+## Mean of population or sample
+
+Population  $\mu=\frac{\sum_x}{N}$
+
+Sample $\bar{x}=\frac{\sum_x}{n}$
+
+The rounding is done after the division and values above 0.5 are  rounded up as 1
+
+## Median of a population
+-Odd = de central value
+-Even = average of the middle 2 values (or just the `median()` function in R )
+
+## weighted mean
+The function is  `weighted.mean(x,w)` and it requires two vectors of equal length
+
+Example; 
+
+``` v1x <- c(105,155,185)
+v1w <- c(22,7,10)
+
+weighted.mean(v1x,v1w)
+
+**Note**: Be careful with sorting, the w and x values are dependant variables (!)
+
+
+```
+
