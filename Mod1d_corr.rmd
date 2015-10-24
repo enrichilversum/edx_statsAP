@@ -11,15 +11,19 @@ $r$ and $r^2$
 the function for that is cor(var_x,var_y) nd fom a dataset it can be cor(dataset$var_x,dataset$var_y)
 
 An example: 
-
-```{r}
-#The dataset is taken from the homework Mod1d
-
-
-options(digits=3)
+```{r include=FALSE}
 dset1 <- read.csv("/home/runlevel0/edx_statsAP/mod1d_cor_dset01.csv")
+library(pander)
+```
 
-knitr::kable(dset1)
+```{r pander}
+#The dataset is taken from the homework Mod1d
+options(digits=3)
+
+
+# knitr::kable(dset1,format="html")
+
+pandoc.table(dset1, style="rmarkdown")
 
 cor(dset1$HW.AVG,dset1$Final.Exam)
 
