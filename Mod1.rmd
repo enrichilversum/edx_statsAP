@@ -22,12 +22,14 @@ The function is  `weighted.mean(x,w)` and it requires two vectors of equal lengt
 
 Example; 
 
-``` v1x <- c(105,155,185)
+```{r} 
+
+v1x <- c(105,155,185)
 v1w <- c(22,7,10)
 
 weighted.mean(v1x,v1w)
 
-**Note**: Be careful with sorting, the w and x values are dependant variables (!)
+# Be careful with sorting, the w and x values are dependant variables (!)
 
 
 ```

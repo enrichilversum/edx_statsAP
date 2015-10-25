@@ -1,0 +1,34 @@
+---
+title: "Mod1d_lm"
+author: "runlevel0"
+date: "October 25, 2015"
+output: html_document
+---
+
+Before starting, there is a nice dataset here: http://www.ats.ucla.edu/stat/data/hsb2.csv
+
+Thus: 
+
+```{r include=FALSE}
+
+hsb2 <- read.csv("http://www.ats.ucla.edu/stat/data/hsb2.csv")
+```
+
+### calculating slope and the linear equation in R
+
+To find the slop (intercept) and the values of the equation I use the lm() funtction like this: 
+
+- Given two points A= (8,10) and B=(12,16) (the way they are displayed in textbooks)
+
+```{r}
+# x <- c(A[1],B[1]) and y <- c(A[2],B[2])
+
+x <- c(8,12)
+y <- c(10,16)
+
+lm(y ~ x)
+
+```
+
+The equation is $$y=2x-4$$, thus  $$y= slope*x-intercept $$
+

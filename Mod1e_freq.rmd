@@ -1,0 +1,46 @@
+---
+title: "Mod1e_freq"
+author: "runlevel0"
+date: "October 25, 2015"
+output: html_document
+---
+### Hot to create a frequency table (univariate)
+
+
+```{r}
+# Example vector data1
+data1 <- c(1, 2, 1, 0, 3, 4, 0, 1, 1, 1, 2, 2, 3, 2, 3, 2, 1, 4, 0, 0)
+```
+
+- First determine the range of the data and round it up for ease of use:
+
+```{r}
+range(data1)
+```
+
+- Break the range into nonoverlapping intervals: 
+
+```{r}
+breaks <- seq(0,4,by=1)
+```
+- Cut the data to be disstributed among the intervals: 
+
+```{r}
+data1.cut <- cut(data1,breaks)
+```
+
+- Compute the frequency: 
+
+```{r}
+data1.freq <- table(data1.cut)
+```
+- To compute the cummulative fequency we use the cumsum() function on the above table and as a final touch use cbind() to  display in column format: 
+
+```{r}
+data1.cumfreq <- cbind(cumsum(data1.freq))
+data1.cumfreq
+``` 
+
+
+
+
