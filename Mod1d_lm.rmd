@@ -32,3 +32,21 @@ lm(y ~ x)
 
 The equation is $$y=2x-4$$, thus  $$y= slope*x-intercept $$
 
+### Ploting series of coordinate pairs
+*** There seems to have ben a change here as in the past it ws possible to just plot like that (not R ode as it would fail): 
+
+     plot(list(c(1,2),c(3,5),c(4,1)))
+
+Now this fails miserably and you need to specify the values for X and Y this way: 
+
+```{r} 
+
+#given the ordered pairs (1,2), (3,5) and (4,1)
+
+x <- c(1,3,4)
+y <- c(2,5,1)
+
+plot(x,y)
+
+
+
