@@ -48,5 +48,30 @@ y <- c(2,5,1)
 
 plot(x,y)
 
+```
+
+*** For short tutorial see the SENIC howto (in html for convenience) ***
+
+### Predicted value
+
+The symbol for the predicted values for y is y-hat: 
+
+$$\hat{y}=a+bx$$
+
+being *a* (or $b_0$ for multiple regression models) the intercept (-intecept) and *b* the slope coefficient
+
+#### Y Intercept: 
+
+$$a=\bar{y}-b*\bar{x}$$
+
+#### Slope Coefficient
+
+$$b=r\left(\frac{S_y}{S_x}\right)$$
+
+r * ratio of the SD of the Y values by the SD of the x values
+
+
+
+
 
 
