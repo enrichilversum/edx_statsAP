@@ -1,0 +1,84 @@
+---
+title: "LSLR example with the SENIC dataset"
+author: "runlevel0"
+date: "October 26, 2015"
+output: html_document
+---
+
+### Credits
+
+Tutorial based on this tutorial: 
+http://kenanfellows.org/kfp-cp-sites/cp19/cp19/lesson-1-least-squares-linear-regression-r/index.html
+
+### Preparing the dataset
+
+The dataset can be found here in XLS format: 
+"http://www.unc.edu/~nielsen/soci709/data/data.htm/knnappenc01.xls"
+
+I assume that the file is downloaded to $PWD
+
+In order to import it it is necessary to install the package gdata: 
+
+
+install.packages("gdata")
+
+```{r}
+library(gdata)
+
+
+senic <- read.xls("knnappenc01.xls")
+View(senic)
+
+```
+
+
+
+The column names need o be changed, for that I use this document as guide: 
+
+https://datamining.bus.utk.edu/Documents/SENIC-Description.pdf
+
+I create a vector with the ne names and aply these to the senic data frame using the paste() function: 
+
+```{r}
+
+vnames <- c("ID","Stay","Age","Risk","Culture","X.ray","Beds","Aff","Region","Census","Nurses","Facilities")
+
+names(senic) <- paste(vnames)
+View(senic)
+
+```
+
+### Plotting some data
+
+First I prepare some variables for convenience: 
+
+```{r}
+stay <- senic$Stay
+risk <- senic$Risk
+```
+
+I will first ceate a linear model and finally plot it all: 
+
+```{r}
+model1 <- lm(risk~stay)
+
+yfit <- model1$fitted.values
+
+plot(stay,risk, xlab="Lenght of Stay", ylab="Risk of Infection", main="Risk of Nosocomial Infection")
+lines(stay,yfit)
+
+resid <- risk-yfit #residuals
+plot(stay-yfit) #residuals plot
+cor(stay,risk) # correlation
+```
+
+
+
+
+
+
+
+
+
+
+
