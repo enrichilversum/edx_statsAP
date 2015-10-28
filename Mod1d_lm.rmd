@@ -70,7 +70,22 @@ $$b=r\left(\frac{S_y}{S_x}\right)$$
 
 r * ratio of the SD of the Y values by the SD of the x values
 
+### Outliers
 
+Outliers can be deined / detected or eliminated calculatin the quantiles. A handy function comes in: 
+
+```{r}
+remove_outliers <- function(x, na.rm = TRUE, ...) {
+  qnt <- quantile(x, probs=c(.25, .75), na.rm = na.rm, ...)
+  H <- 1.5 * IQR(x, na.rm = na.rm)
+  y <- x
+  y[x < (qnt[1] - H)] <- NA
+  y[x > (qnt[2] + H)] <- NA
+  y
+}
+```
+
+Horizontal outliers (those that ye on the horizontal axis) are also called *influential point* as they change the slope of the regression line.
 
 
 
