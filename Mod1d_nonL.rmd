@@ -1,0 +1,38 @@
+---
+title: "Mod1d_nonL"
+author: "Enric Martinez"
+date: "30 oktober 2015"
+output: html_document
+---
+
+### Nonlinear Regression
+
+* Datasets can be found here: 
+
+http://www.itl.nist.gov/div898/strd/nls/nls_main.shtml
+
+To import the .dat files use the following: 
+
+For convienience I place the URL into a variable, then I check the file out with readLine() and find out were it ends. 
+
+```{r}
+
+dat_URL="http://www.itl.nist.gov/div898/strd/nls/data/LINKS/DATA/Misra1a.dat"
+
+readLine(dat_URL)
+
+read.table(dat_URL,skip=60)
+
+```
+As I can't figure out how to make it behave so that it doesn't paste the headers into the first line I will just skip the header=TRUE argument and add the headers myself.
+
+```{r}
+nonlinear01 <- read.table(dat_URL,skip=60)
+names(nonlinear01) <- c("y","x")
+View(nonlinear01)
+```
+
+That's it.
+
+
+
