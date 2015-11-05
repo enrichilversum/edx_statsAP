@@ -1,0 +1,50 @@
+---
+title: "Mod 3A Probability"
+author: "Enric Martinez"
+date: "5 november 2015"
+output: html_document
+---
+
+## Probability (Intro)
+
+### Resources: 
+
+Besides the resources in eDX there is a very nice and to the point free book in cran: 
+
+https://cran.r-project.org/web/packages/IPSUR/vignettes/IPSUR.pdf 
+(or here: https://www.dropbox.com/s/aitc45w5z11n45b/IPSUR.pdf?dl=0)
+
+
+
+This supersedes the need for other texts for this course.
+
+The necessary pacakges to follow chapeter 4 are   "prob" and "combinat": 
+
+
+install.packages("prob")   (It doesn't work with knitr)
+install.packages("combinat") 
+
+
+
+### Sample Space
+
+The sample space of an experiment (for instance coin toss with H being heads and T being toes):  $E$ is $$S={H,T}$$
+
+An useful function is tosscoin which generates such sample spaces: 
+
+```{r}
+library(prob)
+
+S_space <- tosscoin(3)
+
+````
+
+the function rolldie() cannot be found so that I have made my own : 
+
+```{r}
+rolldie <- function(n,m) sample(1:m,n,replace=T)
+```
+
+
+
+
