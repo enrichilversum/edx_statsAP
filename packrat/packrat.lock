@@ -1,0 +1,180 @@
+PackratFormat: 1.4
+PackratVersion: 0.4.6.1
+RVersion: 3.2.2
+Repos: CRAN=https://cran.rstudio.com/
+
+Package: R2HTML
+Source: CRAN
+Version: 2.3.1
+Hash: cbfa438878fd8c867eda6324061d7431
+
+Package: Rcpp
+Source: CRAN
+Version: 0.12.1
+Hash: 02ad87c166e4a92976052106e3826893
+
+Package: VGAM
+Source: CRAN
+Version: 1.0-0
+
+Package: bitops
+Source: CRAN
+Version: 1.0-6
+Hash: 67d0775189fd0041d95abca618c5c07e
+
+Package: caTools
+Source: CRAN
+Version: 1.17.1
+Hash: 97cb6f6293cd18d17df77a6383cc6763
+Requires: bitops
+
+Package: combinat
+Source: CRAN
+Version: 0.0-8
+
+Package: contfrac
+Source: CRAN
+Version: 1.1-9
+
+Package: deSolve
+Source: CRAN
+Version: 1.12
+
+Package: digest
+Source: CRAN
+Version: 0.6.8
+Hash: de202f956596a476d09304e3a2ebf1e5
+
+Package: elliptic
+Source: CRAN
+Version: 1.3-5
+
+Package: evaluate
+Source: CRAN
+Version: 0.8
+Hash: aac00bd789bac10970b50e3b7e0cab04
+Requires: stringr
+
+Package: fAsianOptions
+Source: CRAN
+Version: 3010.79
+Requires: timeDate, timeSeries, fBasics, fOptions
+
+Package: fBasics
+Source: CRAN
+Version: 3011.87
+Requires: gss, stabledist, timeDate, timeSeries
+
+Package: fOptions
+Source: CRAN
+Version: 3010.83
+Requires: timeDate, timeSeries, fBasics
+
+Package: formatR
+Source: CRAN
+Version: 1.2.1
+Hash: 54c730c712edd6087972ecf99bf87c55
+
+Package: gdata
+Source: CRAN
+Version: 2.17.0
+Hash: e7d520c2a9597b303f54499e3bd90644
+Requires: gtools
+
+Package: gss
+Source: CRAN
+Version: 2.1-5
+
+Package: gtools
+Source: CRAN
+Version: 3.5.0
+Hash: 471b2e2452dfb30fdc1dd6f1b567925a
+
+Package: highr
+Source: CRAN
+Version: 0.5.1
+Hash: 114ef5abcf58bebbf6ac083b9cacbbd8
+
+Package: htmltools
+Source: CRAN
+Version: 0.2.6
+Hash: 595e7dea94f5f049dfc1ed739f5161af
+Requires: digest
+
+Package: hypergeo
+Source: CRAN
+Version: 1.2-11
+Requires: contfrac, deSolve, elliptic
+
+Package: knitr
+Source: CRAN
+Version: 1.11
+Hash: 0a6d1006425040af05e29504af948535
+Requires: digest, evaluate, formatR, highr, markdown, stringr, yaml
+
+Package: magrittr
+Source: CRAN
+Version: 1.5
+Hash: bdc4d48c3135e8f3b399536ddf160df4
+
+Package: markdown
+Source: CRAN
+Version: 0.7.7
+Hash: fea2343a1119d61b0cc5c0a950d103a3
+Requires: mime
+
+Package: mime
+Source: CRAN
+Version: 0.4
+Hash: b08c52dae92a0a11e64a4deea032ec33
+
+Package: packrat
+Source: CRAN
+Version: 0.4.6-1
+Hash: 29eacc43b096c5b1a82c8d54a49b030b
+
+Package: pander
+Source: CRAN
+Version: 0.5.2
+Hash: 9d10f8393ea0b6337c4fdce94375e8cd
+Requires: Rcpp, digest
+
+Package: prob
+Source: CRAN
+Version: 0.9-5
+Requires: VGAM, combinat, hypergeo, fAsianOptions
+
+Package: rmarkdown
+Source: CRAN
+Version: 0.8.1
+Hash: 13ce5c86c765918f857c602d97d1ffb9
+Requires: caTools, htmltools, knitr, yaml
+
+Package: stabledist
+Source: CRAN
+Version: 0.7-0
+
+Package: stringi
+Source: CRAN
+Version: 1.0-1
+Hash: cf342bc407bd5daec77ed1009d5244e1
+
+Package: stringr
+Source: CRAN
+Version: 1.0.0
+Hash: 2676dd5f88890910962b733b0f9540e1
+Requires: magrittr, stringi
+
+Package: timeDate
+Source: CRAN
+Version: 3012.100
+
+Package: timeSeries
+Source: CRAN
+Version: 3012.99
+Requires: timeDate
+
+Package: yaml
+Source: CRAN
+Version: 2.1.13
+Hash: 4854ccabebc225e8a7309fb4a74980de
