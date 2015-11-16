@@ -37,13 +37,16 @@ library(prob)
 
 S_space <- tosscoin(3)
 
-````
-
-the function rolldie() cannot be found so that I have made my own : 
-
-```{r}
-rolldie <- function(n,m) sample(1:m,n,replace=T)
 ```
+
+### Probabilty distribution  
+
+$E(x)$ the Expected Value is the mean of a probability distribution. The notation is: 
+
+$$E(x)$$  or $$E[X]$$
+
+
+
 
 
 
