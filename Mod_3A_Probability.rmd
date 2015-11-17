@@ -46,8 +46,40 @@ $E(x)$ the Expected Value is the mean of a probability distribution. The notatio
 $$E(x)$$  or $$E[X]$$
 
 
+### Probability measures
 
+#### mean $\mu$
 
+```{r}
+x <- c(10,0,-2,-10)
+f <- c(1/6,1/6,1/6,1/2)
 
+mu <- sum(x*f)
 
+mu
+```
+
+#### variance $\sigma^2$
+
+```{r}
+
+sigma2 <- sum((x-mu)^2*f)
+
+sigma2
+```
+
+#### accumulated probabilities $F_X$
+
+```{r}
+
+F <- cumsum(f)
+
+F
+```
+
+there is also a library `distrEx` 
+
+### Binomial distribution
+
+$$fx(x)=\binom{n}{x}p^x(1-p)^{n-x},\qquad  x=0,1,2,...,n$$
 
