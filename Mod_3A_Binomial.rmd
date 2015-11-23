@@ -1,0 +1,33 @@
+---
+title: "Mod 3A Binomial distribution"
+author: "runlevel0"
+date: "23 november 2015"
+output: html_document
+---
+
+### A small function to find coeficcients given a vector x and an integer n: 
+
+```{r}
+cfnt <- function(n,x) {
+        # just for clarities sake I calculate the factorials first
+        fx = factorial(x)
+        fn = factorial(n)
+        fn_x = factorial(n-x)
+        
+        rval = fn / (fx*fn_x)
+        
+        return(rval)
+}
+
+# Example, like in Mod3A Binomial Dist, Part 4
+
+x <- c(0:4)
+n <- 4
+
+cfnt(4,x)
+
+
+```
+
+
+        
