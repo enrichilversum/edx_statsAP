@@ -29,5 +29,42 @@ cfnt(4,x)
 
 ```
 
+### Binomial Probability, Example 1
+
+The equation is: 
+
+$$\sum\limits_{x=0}^n\binom{n}{k}p^x(1-p)^{n-x}$$
+
+The R function that does that is dbinom(), he help funcion is somewhat confusing as it states that the arguments are x, size and *prob*ability, this is equivalent to x,n and P.
+
+For the exaple in the video: 
+
+```{r}
+n <- 25
+P <- .20
+x <- 6
+
+dbinom(x,n,P)
+
+```
+### Cumulative Binomial distribution
+
+In the 2nd example there is a weird "bug", so that I need to be careful with that.
+
+The function used is `pbinom`, without any extra argument it calculate the cumulative binomial distribution for $P(X>x)$, for cumulative probabilities of $P(X\leqx)$ the argument to be used is `lower.tail=FALSE`. 
+
+_CAUTION_: In the example homework $P(X\geq5)$ (with n:10 and p:0.4) is 0.36689674, while this result is obtained in R with the following: 
+
+```{r}
+p <- .4
+n <- 10
+X <- 4
+
+pbinom(X,n,p)
+```
+The reason is that statcrunch uses the $\geq$ operator while pbinom() uses $>$ (thus bigger than 4, or at least 5)
+
+
+
 
         
