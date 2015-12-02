@@ -1,0 +1,41 @@
+---
+title: "Mod 3A Geometrical Distribution"
+author: "runlevel0"
+date: "2 december 2015"
+output: html_document
+---
+
+---
+title: "Mod 3A Geometrical Distribution"
+author: "runlevel0"
+date: "2 december 2015"
+output: html_document
+---
+
+### The Geometrial distibution
+
+This means: Teh amount of failures of Bernoulli trials until a success is achieved. The Function in R to do that is `dgeom(x,prog,log=T/F)`. Note that the value of x has to be the number of trials-1
+
+Thus, for exercise on part 1: 
+
+```{r}
+#this is the first question about the circular spinner
+trials <- 5
+x <- trials-1 #just to make it clear
+prob <- (1/10)
+
+round((dgeom(x,prob)), digits=2)
+
+```
+
+#### Getting at least one success in x trials
+
+`pgeom(q,prob)`  with q = trials - 1
+
+#### Getting one success in more than x trials
+
+`pgeom(q,prob,ower.tail=TRUE)` with q = trials-1
+
+
+
+

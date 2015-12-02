@@ -51,7 +51,7 @@ dbinom(x,n,P)
 
 In the 2nd example there is a weird "bug", so that I need to be careful with that.
 
-The function used is `pbinom`, without any extra argument it calculate the cumulative binomial distribution for $P(X>x)$, for cumulative probabilities of $P(X\leqx)$ the argument to be used is `lower.tail=FALSE`. 
+The function used is `pbinom`, without any extra argument it calculate the cumulative binomial distribution for $P(X>x)$, for cumulative probabilities of $P(X\leq x)$ the argument to be used is `lower.tail=FALSE`. 
 
 _CAUTION_: In the example homework $P(X\geq5)$ (with n:10 and p:0.4) is 0.36689674, while this result is obtained in R with the following: 
 
